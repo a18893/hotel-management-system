@@ -2,7 +2,8 @@ spring:
   application:
     name: CONFIG-PROD
   profiles:
-    active: prod  
+    active: prod
+
 eureka:
   instance:
     prefer-ip-address: true
@@ -12,3 +13,54 @@ eureka:
     enabled: true
     service-url:
       defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
+
+logging:
+  level:
+    root: INFO
+    org.springframework: INFO
+    org.hibernate.SQL: WARN
+    com.dev: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} %-5level %c{1}:%L - %msg%n"
+  file:
+    name: logs/${spring.application.name}.log
+  logback:
+    rollingpolicy:
+      file-name-pattern: logs/${spring.application.name}-%d{yyyy-MM-dd}.log
+      max-file-size: 10MB
+      max-history: 10
+  charset:
+    console: UTF-8
+    file: UTF-8
+
+management:
+  server:
+    port: ${MANAGEMENT_PORT:${server.port}}
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,env,beans,loggers,threaddump,heapdump,refresh
+      base-path: /actuator
+  endpoint:
+    health:
+      show-details: always
+    loggers:
+      enabled: true
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: Hotel Management System
+    description: Microservices-based Hotel Booking Platform
+    version: 1.0.0
+  contact:
+    developer: Avinash Kumar
+    email: avinash@example.com
+    organization: MagadhSoft

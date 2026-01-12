@@ -56,7 +56,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info,metrics,env,beans,loggers,threaddump,heapdump,refresh
+        include: health,info
       base-path: /actuator
   endpoint:
     health:

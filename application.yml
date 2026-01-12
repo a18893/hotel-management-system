@@ -112,6 +112,7 @@ EUREKA_URL: http://localhost:8761/eureka
 
 kafka:
   topics:
-    booking-events: booking-events
+    booking-events: booking-events-topic
     hotel-room-availability: hotel-room-availability-topic
     payment-status: payment-status-topic
+    booking-rejection: booking-rejection-topic

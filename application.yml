@@ -34,7 +34,8 @@ logging:
     org.hibernate.SQL: WARN
     com.dev: DEBUG
   pattern:
-    console: "%d{yyyy-MM-dd HH:mm:ss} %-5level %c{1}:%L - %msg%n"
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%X{traceId}] %-5level %c{1}:%L - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%X{traceId}] %-5level %c{1}:%L - %msg%n"
   file:
     name: logs/${spring.application.name}.log
   logback:

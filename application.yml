@@ -56,11 +56,12 @@ logging:
   charset:
     console: UTF-8
     file: UTF-8
-
 gateway:
   internal:
     key: "HotelManagementSecretKey_2026"
-
+security:
+  gateway:
+    key: "HotelManagementSecretKey_2026"    
 management:
   server:
     port: ${MANAGEMENT_PORT:${server.port}}

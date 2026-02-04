@@ -17,7 +17,7 @@ spring:
        spring.json.add.type.headers: true
     consumer:
       #group-id: hotel-service-group
-      #group-id: hotel-service-group-v2
+      group-id: hotel-service-group-v2
       # auto-offset-reset: earliest
       # key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       # value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
@@ -63,9 +63,9 @@ logging:
 gateway:
   internal:
     key: "HotelManagementSecretKey_2026"
-#security:
- # gateway:
-  #  key: "HotelManagementSecretKey_2026"    
+security:
+  gateway:
+    key: "HotelManagementSecretKey_2026"    
 jwt:
   public-key: |
     -----BEGIN PUBLIC KEY-----

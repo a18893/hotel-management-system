@@ -66,6 +66,18 @@ gateway:
 security:
   gateway:
     key: "HotelManagementSecretKey_2026"    
+jwt:
+  public-key: |
+    -----BEGIN PUBLIC KEY-----
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtzwsdLQuRYLJ59LmeLZ4
+   CdFYUGAHp56qm5p0Y9HOkfBHCV7ooD4yn3SUX3PyPjhn5p+fItw7uTaC4zqjGi1N
+   tKfEm7kcxGkTo8cLEIuAwyrtFqMgD0yAHdem0mkhDNVkyQp3DoCFQzZxfyPTZdyv
+   dwpyhZFVSwYsqwht7iNlSCPOPwRxQXnyU6mvLH5J+zLSRQt+Qstmfpb19luvBWxc
+   9JC0YzdGMkURVYwywbWfQMWQQhXn5hB749XLJpdzRIqaN7zfYTfF7VPWbjISjsgS
+   nXbpqHszh3qNrarNVw5M35VpyjXbtYeDIZz3hly6PTlRUMztVhk47fW1aNTNpgpY
+   zQIDAQAB
+    -----END PUBLIC KEY-----
+
 management:
   server:
     port: ${MANAGEMENT_PORT:${server.port}}

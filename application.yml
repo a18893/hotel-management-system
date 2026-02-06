@@ -145,3 +145,4 @@ kafka:
     hotel-manager-assigned: hotel-manager-assigned-topic
     payment-status: payment-status-topic
     booking-rejection: booking-rejection-topic
+    inventory-result: inventory-result
